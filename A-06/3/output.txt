@@ -1,1 +1,3 @@
-422-3+/34-*2*
+<<<<<<<<<< infix to postfix >>>>>>>>>>
+infix expression        : (4/(2-2+3))*(3-4)*2
+postfix expression        : 422-3+/34-*2*

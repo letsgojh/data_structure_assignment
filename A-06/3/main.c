@@ -8,6 +8,8 @@ char outputStr[100]; //잠깐 input.txt의 값 저장하는 용도
 int i = 0; //outputStr의 길이 측정
 int k = 0; // i만큼 길이 측정
 
+void inputForm(FILE *f);
+void outputForm(FILE *f);
 int getToken(char string);
 void InfixToPosfix(FILE *f);
 void Input();
@@ -15,6 +17,17 @@ void Input();
 
 int main(void){
     Input();
+}
+
+void inputForm(FILE *f){
+    fprintf(f,"<<<<<<<<<< infix to postfix >>>>>>>>>>\n");
+    fprintf(f,"infix expression        : ");
+
+    fprintf(f,"%s\n",outputStr);
+}
+
+void outputForm(FILE *f){
+    fprintf(f,"postfix expression        : ");
 }
 
 int getToken(char string){
@@ -101,13 +114,13 @@ void InfixToPosfix(FILE *f){
 }
 
 void Input(){
-    FILE *f = fopen("input.txt","r");
+    FILE *f = fopen("A-06/3/input.txt","r");
 
     if(f == NULL){
-        printf("file does not open");
+        printf("file does not open1");
         exit(1);
     }
-
+    
     while(1){
         char c = fgetc(f);
         
@@ -120,13 +133,15 @@ void Input(){
 
     fclose(f);
 
-    f = fopen("output.txt","w");
-
+    f = fopen("A-06/3/output.txt","w");
 
     if(f == NULL){
-        printf("file does not open");
+        printf("file does not open2");
         exit(1);
     }
+
+    inputForm(f);
+    outputForm(f);
 
     InfixToPosfix(f);
 
