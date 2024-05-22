@@ -3,12 +3,10 @@
 #include <stdlib.h>
 
 
-typedef struct node listNode;
-
-struct node{
+typedef struct listNode{
     int data;
-    listNode* link;
-};
+    struct listNode* link;
+}listNode;
 
 
 
@@ -28,9 +26,9 @@ int main(void){
 
 void removeNode(){
     listNode* delNode;
-    
+
     delNode = first;
-    
+
     while(first != NULL){
         first = first->link;
         free(delNode);
@@ -41,16 +39,16 @@ void removeNode(){
 void deleteNode(){
     listNode* delNode;
     listNode *previousNode;
-    
+
     if(first == NULL){ //linkedlist 형성 안되어있을 경우
         printf("not linkedlist\n");
         return;
     }
-    
+
     listNode * traversalNode = first;
-    
+
     while(traversalNode->link != NULL){
-        
+
         if((first->data)%2 == 1){ //첫노드가 홀수일경우
             delNode = first;
             first = first->link;
@@ -64,12 +62,12 @@ void deleteNode(){
 
         while(delNode->link != NULL){ //중간 노드가 홀수일경우
             delNode = delNode->link;
-    
+
             if((delNode->data)%2 == 1){
                 previousNode->link = delNode->link;
                 free(delNode);
                 break;
-                
+
             }
             previousNode = previousNode->link;
         }
@@ -78,12 +76,12 @@ void deleteNode(){
 }
 
 void insertNode(int data){
-    
+
     listNode* newNode = (listNode*)malloc(sizeof(listNode));
-    
+
     newNode->data = data; //받으면 먼저 초기화
     newNode->link = NULL;
-    
+
     if(first == NULL){
         first = newNode; //연결리스트 형성x했을때
         return;
@@ -100,10 +98,10 @@ void insertNode(int data){
 
     currentNode = previousNode = first; 
     //currentNode는 가장 마지막 노드 찾는 포인터, previousNode는 그 전 노드 찾는 포인터
-    
+
     while(currentNode->link != NULL){
         currentNode = currentNode->link; //previous 포인터 때문에 미리 한번 이동
-        
+
         if(newNode->data < currentNode->data){
             newNode->link = currentNode;
             previousNode->link = newNode;
@@ -123,7 +121,7 @@ void printNode(){
     currentNode = first;
 
     printf("The ordered list contatins:\n");
-    
+
     while(currentNode != NULL){
         printf("(%9p, %9d, %9p)",currentNode,currentNode->data,currentNode->link);
         currentNode = currentNode->link;
@@ -134,7 +132,7 @@ void printNode(){
 void Input(){
     FILE * f;
 
-    f = fopen("A-07/1/input.txt","r");
+    f = fopen("A-07/2/input.txt","r");
 
     if(f == NULL){
         printf("file does not open\n");
@@ -143,7 +141,7 @@ void Input(){
 
     int data = 0;
 
-    
+
     while(!feof(f)){
 
         int data;
@@ -152,7 +150,7 @@ void Input(){
     }
 
     fclose(f);
-    
+
     printNode();
     deleteNode();
 
