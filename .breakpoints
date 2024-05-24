@@ -3,15 +3,29 @@
     "A-06/3/main.c": [
       {
         "id": "38a7df41-b302-40d1-a46b-b10d9cdfaa52",
-        "line": 18,
-        "version": 5,
-        "index": 336
+        "line": 19,
+        "version": 14,
+        "index": 337
       },
       {
         "id": "81fbe9ee-49f5-4387-8353-2826d67c2eb5",
-        "line": 20,
-        "version": 5,
-        "index": 365
+        "line": 21,
+        "version": 14,
+        "index": 366
+      }
+    ],
+    "A-07/3/main.c": [
+      {
+        "id": "545ac8a6-ee3a-4593-aef4-3c678cbdef47",
+        "line": 35,
+        "version": 1822,
+        "index": 601
+      },
+      {
+        "id": "b9ce2c57-ddc6-4995-9900-784f35f0a410",
+        "line": 56,
+        "version": 1822,
+        "index": 1064
       }
     ]
   }
