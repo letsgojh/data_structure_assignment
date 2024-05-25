@@ -1,4 +1,4 @@
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_STACK_SIZE 100
@@ -146,4 +146,4 @@ void Input(){
 
     InfixToPosfix(f);
 
-}
+}*/

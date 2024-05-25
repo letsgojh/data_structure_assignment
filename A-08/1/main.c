@@ -14,7 +14,7 @@ typedef struct node{
 };
 
 
-void push();
+void add();
 //void pop();
 void sprint();
 void Input();
@@ -24,7 +24,7 @@ int main(void){
     Input();
 }
 
-void push(node element,node** top){
+void add(node element,node** top){
     node * newNode = (node *)malloc(sizeof(node));
 
     newNode->subNum = element.subNum;
@@ -37,7 +37,7 @@ void push(node element,node** top){
         return;
     }
 
-    if((*top)->classNum <newNode->classNum){ //내림차순 정렬
+    if((*top)->classNum >newNode->classNum){ //오름차순 정렬
         newNode->next = *top;
         *top = newNode;
         return;
@@ -48,7 +48,7 @@ void push(node element,node** top){
 
 
     currentNode = previousNode = *top;
-    
+
     while(currentNode->next != NULL){
         currentNode = currentNode->next;
         if(currentNode->classNum > newNode->classNum){
@@ -81,28 +81,32 @@ void Input(){
     f = fopen("A-07/4/input.txt","r");
 
 
-    node * top1 = NULL;
-    node * top2 = NULL;
-    node * top3 = NULL;
+    node * front1 = NULL;
+    node * front2 = NULL;
+    node * front3 = NULL;
     
+    node * rear1 = NULL;
+    node * rear2 = NULL;
+    node * rear3 = NULL;
+
     while(!feof(f)){
         node element;
         fscanf(f,"%d %d %d",&element.subNum,&element.classNum,&element.score);
         //printf("%d %d %d\n",element.subNum,element.classNum,element.score);
-        
+
         if(element.subNum== 0){
-            push(element,&top1);
+            add(element,&rear1);
         }
         else if(element.subNum == 1){
-            push(element,&top2);
+            add(element,&rear2);
         }
         else if(element.subNum == 2){
-            push(element,&top3);
+            add(element,&rear3);
         }
     }
 
     printf("과목번호, 학반, 성적\n");
-    sprint(&top1);
-    sprint(&top2);
-    sprint(&top3);
+    sprint(&rear1);
+    sprint(&rear2);
+    sprint(&rear3);
 }*/
