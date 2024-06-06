@@ -45,15 +45,39 @@
     "A-08/2/main.c": [
       {
         "id": "933daa38-c2e1-448b-88cb-b96eaa53534b",
-        "line": 62,
-        "version": 2752,
-        "index": 1304
+        "line": 57,
+        "version": 5674,
+        "index": 1266
+      },
+      {
+        "id": "637eb435-aea3-46f8-b597-8790642185ef",
+        "line": 67,
+        "version": 5674,
+        "index": 1418
+      },
+      {
+        "id": "6bafcca7-8086-4281-b07c-ce2845b2454b",
+        "line": 67,
+        "version": 5674,
+        "index": 1418
+      },
+      {
+        "id": "cc53650d-3426-4065-b45b-c7ae337d60ea",
+        "line": 90,
+        "version": 5674,
+        "index": 1896
       },
       {
         "id": "55c7b6fe-38f6-4151-802a-f3ede2b28822",
-        "line": 73,
-        "version": 2752,
-        "index": 1484
+        "line": 126,
+        "version": 5674,
+        "index": 2628
+      },
+      {
+        "id": "4b266e36-8a28-45c7-918a-f6d52a567453",
+        "line": 126,
+        "version": 5674,
+        "index": 2661
       }
     ]
   }
