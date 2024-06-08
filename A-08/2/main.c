@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,11 +24,11 @@ void printNode() {
 
   currentNode = first->link;
 
-  /*do{ //circular linked list 를 출력할때는 do while문을 쓴 후, 마지막에 first
-  한번 더 출력 currentNode = currentNode->link; printf("(%4p, %4d,
-  %4p)",currentNode,currentNode->data,currentNode->link); }while(currentNode!=
-  first);
-  //printf("(%5p, %5d, %5p)",currentNode,currentNode->data,currentNode->link);*/
+  //do{ //circular linked list 를 출력할때는 do while문을 쓴 후, 마지막에 first
+  //한번 더 출력 currentNode = currentNode->link; printf("(%4p, %4d,
+  //%4p)",currentNode,currentNode->data,currentNode->link); }while(currentNode!=
+  //first);
+  //printf("(%5p, %5d, %5p)",currentNode,currentNode->data,currentNode->link);
 
   printf("The Circularly Linked List contatins:\n");
   while (currentNode != first) {
@@ -101,6 +102,8 @@ void deleteNode() {
       currentNode = currentNode->link;
     }
   }
+
+  first = currentNode;
   
 }
 
@@ -126,5 +129,4 @@ void Input() {
   printf("\n\nAfter deleting nodes with odd value\n\n");
   printNode();
 
-  //printf("%d",first->link->data);
-}
+}*/

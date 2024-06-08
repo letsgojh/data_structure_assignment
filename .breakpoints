@@ -1,83 +1,17 @@
 {
   "files": {
-    "A-06/3/main.c": [
+    "A-08/3/main.c": [
       {
-        "id": "38a7df41-b302-40d1-a46b-b10d9cdfaa52",
-        "line": 1,
-        "version": 49,
-        "index": 0
+        "id": "f53ff07c-e4b0-4082-8fb9-560307b9d96f",
+        "line": 62,
+        "version": 4013,
+        "index": 1514
       },
       {
-        "id": "81fbe9ee-49f5-4387-8353-2826d67c2eb5",
-        "line": 1,
-        "version": 49,
-        "index": 0
-      }
-    ],
-    "A-07/3/main.c": [
-      {
-        "id": "545ac8a6-ee3a-4593-aef4-3c678cbdef47",
-        "line": 75,
-        "version": 2260,
-        "index": 1478
-      },
-      {
-        "id": "b9ce2c57-ddc6-4995-9900-784f35f0a410",
-        "line": 96,
-        "version": 2260,
-        "index": 2000
-      }
-    ],
-    "A-07/4/main.c": [
-      {
-        "id": "948db258-b75b-404c-876c-c3c4b92ceb0a",
-        "line": 88,
-        "version": 2267,
-        "index": 1603
-      },
-      {
-        "id": "aa4b3e47-fa2e-4dc8-a93c-a4f05db8b5e9",
-        "line": 105,
-        "version": 2267,
-        "index": 2072
-      }
-    ],
-    "A-08/2/main.c": [
-      {
-        "id": "933daa38-c2e1-448b-88cb-b96eaa53534b",
-        "line": 57,
-        "version": 5674,
-        "index": 1266
-      },
-      {
-        "id": "637eb435-aea3-46f8-b597-8790642185ef",
-        "line": 67,
-        "version": 5674,
-        "index": 1418
-      },
-      {
-        "id": "6bafcca7-8086-4281-b07c-ce2845b2454b",
-        "line": 67,
-        "version": 5674,
-        "index": 1418
-      },
-      {
-        "id": "cc53650d-3426-4065-b45b-c7ae337d60ea",
-        "line": 90,
-        "version": 5674,
-        "index": 1896
-      },
-      {
-        "id": "55c7b6fe-38f6-4151-802a-f3ede2b28822",
-        "line": 126,
-        "version": 5674,
-        "index": 2628
-      },
-      {
-        "id": "4b266e36-8a28-45c7-918a-f6d52a567453",
-        "line": 126,
-        "version": 5674,
-        "index": 2661
+        "id": "f6da1631-aac6-4855-84cb-0d916484dec6",
+        "line": 80,
+        "version": 4013,
+        "index": 2024
       }
     ]
   }
