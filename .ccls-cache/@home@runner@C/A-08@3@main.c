@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -263,4 +264,4 @@ void Input() {
   printC(&headC);
 
   // printf("coef : %d, degree : %d",headC->coefficient,headC->degree);
-}
+}*/
