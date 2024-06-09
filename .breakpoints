@@ -13,6 +13,20 @@
         "version": 4195,
         "index": 2070
       }
+    ],
+    "A-09/3/main.c": [
+      {
+        "id": "be9b6ac4-3c54-49cc-afaa-282b53fe2005",
+        "line": 20,
+        "version": 1343,
+        "index": 245
+      },
+      {
+        "id": "f3bf1f17-b44d-4bdf-8844-d9503eca1c38",
+        "line": 38,
+        "version": 1343,
+        "index": 696
+      }
     ]
   }
 }
