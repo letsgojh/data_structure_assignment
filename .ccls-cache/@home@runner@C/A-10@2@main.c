@@ -11,66 +11,95 @@ struct node {
   char data;
 };
 
+node * root = NULL;
 int front = 0;
 int rear = 0;
 
 node *queue[MAX_QUEUE_SIZE];
 
-void deleteQueue();
-void addNode(char data);
-void addQueue(char data);
+
+void inOrder(node ** root);
+void preOrder(node ** root);
+void postOrder(node ** root);
+void addNode(node ** root,char data);
 
 void Input();
 
 int main(void) { Input(); }
 
+void inOrder(node ** root){
 
-void deleteQueue(){
-  if(front == rear){
-    printf("Queue is empty");
-    return;
-  }
-  front++;
+  node * currentNode = *root;
+
+  if(currentNode->left != NULL)
+    inOrder(&currentNode->left);
+  
+  printf("%c ",currentNode->data);
+
+  if(currentNode->right != NULL)
+    inOrder(&currentNode->right);
+
+}
+void preOrder(node ** root){
+  node * currentNode = *root;
+
+  printf("%c ",currentNode->data);
+  
+  if(currentNode->left != NULL)
+    preOrder(&currentNode->left);
+
+  if(currentNode->right != NULL)
+    preOrder(&currentNode->right);
+}
+void postOrder(node ** root){
+  node * currentNode = *root;
+
+
+  if(currentNode->left != NULL)
+    preOrder(&currentNode->left);
+
+  if(currentNode->right != NULL)
+    preOrder(&currentNode->right);
+
+  printf("%c ",currentNode->data);
 }
 
-
-void addNode(char data) {
+void addNode(node ** root,char data) {
 
   node *newNode = (node *)malloc(sizeof(node));
   newNode->left = NULL;
   newNode->right = NULL;
   newNode->data = data;
 
+
+  if (rear == 0) {
+    queue[rear++] = newNode;
+    *root = newNode;
+    return;
+  }
+  
+
   while(1){ // queue에 char 데이터만 따로 저장하려고 했는데 되지 않는다.. 왜지?
-    if (rear == 0) {
-      addQueue(data);
-      break;
-    }
   
     if (queue[front]->left == NULL) {
       queue[front]->left = newNode;
-      addQueue(data);
+      queue[rear++] = newNode;
+      //printf("case1\n");
       break;
     }
   
-    if (queue[front]->right == NULL) {
+    else if (queue[front]->right == NULL) {
       queue[front]->right = newNode;
-      addQueue(data);
+      queue[rear++] = newNode;
+      //printf("case2\n");
       break;
     }
 
-    deleteQueue();
+    front++;
     
   }
 }
 
-void addQueue(char data) {
-  if (rear == MAX_QUEUE_SIZE) {
-    printf("queue is full\n");
-    return;
-  }
-  queue[rear++]->data = data;
-}
 void Input() {
   FILE *f;
 
@@ -82,13 +111,24 @@ void Input() {
   }
 
   char k;
+  node * root = NULL;
 
-  while (!feof(f)) {
-    fscanf(f, "%c", &k);
+  
+  while (1) {
+    k = fgetc(f);
+    if(k == EOF) //문자 한개 받을때는 이런식으로 받기 , NULL값까지 받으니깐 트리 이상하게 만들어진다.
+      break;
     //printf("%c",k);
-    addNode(k);
-    break;
+    addNode(&root,k);
   }
 
-  printf("%c",queue[front]->data);
+
+  printf("creating a complete binary tree\n\n");
+  printf("three binary tree traversals\n");
+  printf("inorder traversal       : ");
+  inOrder(&root);
+  printf("\npreorder traversal      : ");
+  preOrder(&root);
+  printf("\npostorder traversal     : ");
+  postOrder(&root);
 }
