@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -110,4 +111,4 @@ void Input() {
   printf("\n\n");
   printf("postorder traversal   :\n");
   postorder(&root);
-}
+}*/

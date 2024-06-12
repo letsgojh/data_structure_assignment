@@ -31,15 +31,23 @@
     "A-10/1/main.c": [
       {
         "id": "5235254d-eb71-45fc-94aa-bd6106f48610",
-        "line": 21,
-        "version": 1617,
-        "index": 307
+        "line": 22,
+        "version": 1972,
+        "index": 310
       },
       {
         "id": "ce4d1798-bfe9-421b-8dd4-48ead1925bf9",
-        "line": 28,
-        "version": 1617,
-        "index": 469
+        "line": 33,
+        "version": 1972,
+        "index": 613
+      }
+    ],
+    "A-10/2/main.c": [
+      {
+        "id": "e0d43388-2f86-4189-ab8e-bfaf706ee59a",
+        "line": 88,
+        "version": 1252,
+        "index": 1313
       }
     ]
   }
