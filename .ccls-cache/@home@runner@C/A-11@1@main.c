@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -99,13 +100,13 @@ void add(node ** root,char data){
 
     int token = createToken(data);
     
-/* root가 계속 바뀌는데 첫번째로 지정해서 코드가 안돌아간 것
-    if(root == NULL){
-        root = newNode;
-        stack[++top] = newNode;
-        return;
-    }
-*/
+// root가 계속 바뀌는데 첫번째로 지정해서 코드가 안돌아간 것
+//    if(root == NULL){
+//        root = newNode;
+//        stack[++top] = newNode;
+//        return;
+//    }
+
     
     if(token == 0){
         stack[++top] = newNode;
@@ -122,7 +123,7 @@ void add(node ** root,char data){
 void Input(){
     FILE * f;
 
-    f = fopen("A-11/input.txt","r");
+    f = fopen("A-11/1/input.txt","r");
 
     if(f == NULL){
         printf("file does not open\n");
@@ -153,4 +154,4 @@ void Input(){
     printf("\npostorder traversal    :");
     postOrder(&root);
 
-}
+}*/
